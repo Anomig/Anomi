@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomi | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Anomi</div>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hi, I'm Naomi</h1>
+        <p>As a "Digital Experience Design" student, I combine creativity and technology to make stong digital solutions.</p>
+    </section>
+
+    <div class="decorative-divider"></div>
+
+    <section class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide" style="background-image: url('images/css_zengarden/web1.png');"></div>
+            <div class="carousel-slide" style="background-image: url('images/dynamic_poster/Memento.svg');"></div>
+            <div class="carousel-slide" style="background-image: url('images/dynamic_typography/timeline.png');"></div>
+        </div>
+        <div class="buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Anomi. Crafted with creativity and passion.
+    </footer>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+        let slideIndex = 0;
+
+        function updateCarousel() {
+            const amountToMove = slides[0].getBoundingClientRect().width;
+            track.style.transform = 'translateX(' + (-amountToMove * slideIndex) + 'px)';
+        }
+
+        nextButton.addEventListener('click', () => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            updateCarousel();
+        }, 5000);
+    </script>
+</body>
+</html>
