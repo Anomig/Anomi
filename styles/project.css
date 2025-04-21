@@ -1,0 +1,132 @@
+:root {
+    --red: #B13D14;
+    --light-peach: #f9f2eb;
+    --dark-brown: #340701;
+    --deep-red: #9C1A04;
+    --peach: #FFD7C1;
+    --black: #090400;
+    --white: #e6e6e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light-peach);
+    color: var(--dark-brown);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--light-peach);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav a {
+    color: var(--dark-brown);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.projects-hero {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+}
+
+.projects-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.projects-hero p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.decorative-divider {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, var(--dark-brown) 0%, var(--red) 50%, var(--deep-red) 100%);
+    opacity: 0.1;
+    clip-path: polygon(0 50%, 10% 40%, 20% 50%, 30% 40%, 40% 50%, 50% 40%, 60% 50%, 70% 40%, 80% 50%, 90% 40%, 100% 50%, 100% 100%, 0 100%);
+    margin: 2rem 0;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--dark-brown);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--red);
+}
+
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark-brown);
+    color: var(--white);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}

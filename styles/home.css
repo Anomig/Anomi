@@ -41,6 +41,11 @@ nav a {
     font-weight: 600;
 }
 
+nav a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
 .hero {
     text-align: center;
     padding: 4rem 2rem 2rem;
@@ -84,7 +89,7 @@ nav a {
     clip-path: polygon(0 50%, 10% 40%, 20% 50%, 30% 40%, 40% 50%, 50% 40%, 60% 50%, 70% 40%, 80% 50%, 90% 40%, 100% 50%, 100% 100%, 0 100%);
     margin: 2rem 0;
 }
-
+/* carousel////////////////////////////////////////////////////////////////////////////////////////////////////:: */
 .carousel {
     margin: 2rem auto;
     max-width: 900px;
@@ -127,6 +132,11 @@ nav a {
     opacity: 0.7;
 }
 
+.buttons button:hover {
+    opacity: 1;
+    background: var(--red);
+}
+/* footer ////////////////////////////////////////////////////////////////////////////////////// */
 footer {
     text-align: center;
     padding: 2rem;
@@ -177,6 +187,10 @@ footer a:hover {
     }
     .hero p {
         font-size: 1rem;
+    }
+    .carousel {
+        margin: 1rem auto;
+        max-width: 85%;
     }
     .carousel-slide {
         height: 250px;
