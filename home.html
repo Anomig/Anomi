@@ -26,22 +26,72 @@
                 omi!
             </span>
         </h1>
-        <p>As a "Digital Experience Design" student, I combine creativity and technology to make stong digital solutions.</p>
+        <p>As a "Digital Experience Design" student, I combine creativity and technology to make strong digital solutions.</p>
     </section>
     <!-- header////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     
     <div class="decorative-divider"></div>
 
     <!-- carousel////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <section class="carousel">
-        <div class="carousel-track">
-            <div class="carousel-slide" style="background-image: url('images/css_zengarden/web1.png');"></div>
-            <div class="carousel-slide" style="background-image: url('images/dynamic_poster/Memento.svg');"></div>
-            <div class="carousel-slide" style="background-image: url('images/dynamic_typography/timeline.png');"></div>
-        </div>
-        <div class="buttons">
-            <button id="prev">&#10094;</button>
-            <button id="next">&#10095;</button>
+    <!-- Project Carrousel /////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <section id="projecten">
+        <div class="carousel">
+            <div class="carousel-view">
+                <div class="carousel-track">
+                    <!-- Voorbeeld Project Items -->
+                    <a href="/projects/uselessweb/detail.html" class="project-item" style="background-image: url('images/uselessweb/candle.png');">
+                        <div class="project-info">
+                            <h3>The useless web</h3>
+                            <span class="project-tag">Design</span>
+                        </div>
+                    </a>
+                    <a href="projects/dynamic_typography/detail.html" class="project-item" style="background-image: url('images/dynamic_typography/timeline.png');">
+                        <div class="project-info">
+                            <h3>Dynamic typography</h3>
+                            <span class="project-tag">Typografie</span>
+                            <span class="project-tag">CSS animatie</span>
+                        </div>
+                    </a>
+                    <a href="projects/dynamic_poster/detail.html" class="project-item" style="background-image: url('images/dynamic_poster/Memento.svg');">
+                        <div class="project-info">
+                            <h3>Dynamic poster</h3>
+                            <span class="project-tag">Design</span>
+                            <span class="project-tag">CSS animatie</span>
+                        </div>
+                    </a>
+                    <a href="projects/css_zengarden/detail.html" class="project-item" style="background-image: url('images/css_zengarden/Moodbord.png');">
+                        <div class="project-info">
+                            <h3>CSS zengarden</h3>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                    </a>
+                    <a href="projects/Hoppin/detail.html" class="project-item" style="background-image: url('images/Hoppin/map.png');">
+                        <div class="project-info">
+                            <h3>Hoppin</h3>
+                            <span class="project-tag">Redesign</span>
+                        </div>
+                    </a>
+                    <a href="projects/wearwise/detail.html" class="project-item" style="background-image: url();">
+                        <div class="project-info">
+                            <h3>WearWise "Coming soon"</h3>
+                            <span class="project-tag">design</span>
+                        </div>
+                    </a>
+                    <a href="projects/little_sun/detail.html" class="project-item" style="background-image: url();">
+                        <div class="project-info">
+                            <h3>Little Sun "Coming soon"</h3>
+                            <span class="project-tag">Php</span>
+                        </div>
+                    </a>
+                    <!-- <a href="" class="project-item" style="background-image: url('project2.jpg');">
+                        <div class="project-info">
+                            <h3>Project 6</h3>
+                            <span class="project-tag">Development</span>
+                        </div>
+                    </a> -->
+                    <!-- Voeg meer projecten toe zoals nodig -->
+                </div>
+            </div>
         </div>
     </section>
     <!-- carousel////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -57,39 +107,7 @@
         </div>
     </footer>
 
-    <script>
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const nextButton = document.getElementById('next');
-        const prevButton = document.getElementById('prev');
-        let slideIndex = 0;
-
-        function updateCarousel() {
-            const amountToMove = slides[0].getBoundingClientRect().width;
-            track.style.transform = 'translateX(' + (-amountToMove * slideIndex) + 'px)';
-        }
-
-        nextButton.addEventListener('click', () => {
-            slideIndex = (slideIndex + 1) % slides.length;
-            updateCarousel();
-        });
-
-        prevButton.addEventListener('click', () => {
-            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        });
-
-        setInterval(() => {
-            slideIndex = (slideIndex + 1) % slides.length;
-            updateCarousel();
-        }, 5000);
-    
-        document.addEventListener('mousemove', function(e) {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-        document.body.style.background = `radial-gradient(circle 150px at ${x * 100}% ${y * 100}%, #FCE7D2, #f9f2eb)`;
-        });
-    </script>
+    <script src="scripts/home.js"></script>
 
     
 </body>
