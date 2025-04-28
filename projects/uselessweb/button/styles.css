@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+#magic-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #9b59b6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#magic-button:hover {
+    background-color: #8e44ad;
+}
+
+#dancing-emoji {
+    font-size: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: dance 1s infinite;
+}
+
+/* Dansanimatie voor de emoji */
+@keyframes dance {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}

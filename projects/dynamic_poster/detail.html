@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic typography</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Header ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar">
+        <a href="/index.html" class="logo">Anomi</a>
+        <ul class="nav-links">
+            <li><a href="/aboutme.html">Over Mij</a></li>
+            <li><a href="/project.html">Projecten</a></li>
+            <li><a href="/resume.html">Resume</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Project Korte Weergave Sectie //////////////////////////////////////////////////////////////////////////////////////::-->
+    <main class="project-detail">
+        <!-- Titel en Samenvatting -->
+        <section class="project-header">
+            <h1>Project Naam</h1>
+            <p class="project-summary">Een korte beschrijving van het project, met nadruk op het belangrijkste doel of de uitkomst.</p>
+        </section>
+
+        <!-- Media Weergave (Afbeeldingen en Videos) -->
+        <section class="project-media">
+            <div class="media-container">
+                <img src="images/project_image1.jpg" alt="Project Afbeelding 1">
+                <img src="images/project_image2.jpg" alt="Project Afbeelding 2">
+                <!-- Voeg meer afbeeldingen toe of video's -->
+                <video controls>
+                    <source src="videos/project_video.mp4" type="video/mp4">
+                    Uw browser ondersteunt de video tag niet.
+                </video>
+            </div>
+        </section>
+
+        <!-- Beschrijving of Notities -->
+        <section class="project-description">
+            <h2>Beschrijving</h2>
+            <p>Hier komt een korte uitleg over het project. Wat was het doel? Hoe is het project ontstaan? Wat zijn de resultaten?</p>
+        </section>
+
+        <section class="project-embed-grid">
+            <div class="embed-item">
+                <h2>Project 1</h2>
+                <iframe src="/projects/dynamic_poster/alien/index.html" width="100%" height="400px" style="border:none;"></iframe>
+            </div>
+            <div class="embed-item">
+                <h2>Project 2</h2>
+                <iframe src="/projects/dynamic_poster/dynamic_poster.html" width="100%" height="400px" style="border:none;"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <footer class="footer">
+        <p>&copy; 2024 Naomi Goyvaerts</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/naomi-goyvaerts" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio&body=Hallo%20Naomi,
+            %0D%0AIk%20ben%20geïnteresseerd%20in%20je%20werk%20en%20wil%20graag%20meer%20weten.%0D%0AGroeten," 
+            title="Stuur een e-mail naar Naomi">Email</a>
+            <a href="https://github.com/Anomig" target="_blank" rel="noopener noreferrer" aria-label="GitHub">Github</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

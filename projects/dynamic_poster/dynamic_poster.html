@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Poster</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.poster-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.poster, .polaroid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.polaroid {
+    height: 45%;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInOut 5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInOut{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <img src="/images/dynamic_poster/Poster_Tekengebied 1.svg" alt="Poster" class="poster">
+        <img src="/images/dynamic_poster/Polaroid-01.svg" alt="Polaroid" class="polaroid" id="polaroid">
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .logo {
+    font-family: Arial, sans-serif;
+    font-size: 5em;
+    position: relative;
+  }
+
+  .g {
+    position: relative;
+    display: inline-block;
+    width: 1em; 
+    height: 1.5em; 
+    overflow: visible;
+  }
+
+  .g::before,
+  .g::after {
+    content: "";
+    position: absolute;
+    width: 1.1em;
+    height: 1.1em; 
+    border-radius: 50%;
+    background-color: #000;
+  }
+
+  .g::before {
+    top: 0.05em; 
+    left: 0.05em; 
+  }
+
+  .g::after {
+    top: 1.1em; 
+    right: 0.5em; 
+  }
+
+  .lenses {
+    position: absolute;
+    width: 0.8em; 
+    height: 0.8em; 
+    background-color: #d7e9f5;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .lens1 {
+    top: 0.18em;
+    left: 0.2em;
+  }
+
+  .lens2 {
+    top: 1.25em;
+    right: 3.75em; 
+  }
+
+  .temple {
+    position: absolute;
+    background-color: #000;
+    width: 0.15em; 
+    height: 0.8em; 
+  }
+  
+  .left-temple {
+    top: 99%; 
+    left: -15%; 
+    transform: translateY(25%) rotate(-140deg); 
+  }
+  
+  .right-temple {
+    top: 5%; 
+    right: 70%; 
+    transform: translateY(-50%) rotate(-135deg); 
+  }
+
+  .shimmer{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255,255,255,0));
+    animation: shimmer-animation 1s infinite;
+    z-index: 2;
+  }
+
+  @keyframes shimmer-animation {
+    0% {
+      left: -100%
+    }
+    100% {
+      left: 100%
+    }
+  }
