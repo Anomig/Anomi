@@ -62,8 +62,22 @@ nav a:hover {
     margin-top: 3rem;
 }
 
+.project-process img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 1rem 1rem 2rem 0;
+    object-fit: cover;
+}
+
+.project-process img + img{
+    margin-top: 1rem;
+}
+
 .process-step {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .gallery-grid {
@@ -93,3 +107,11 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+@media (min-width: 768px) {
+    .process-step img {
+      display: inline-block;
+      margin-right: 1rem;
+      vertical-align: top;
+    }
+  }
