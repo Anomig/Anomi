@@ -37,7 +37,7 @@ body {
 
 .about-hero .about-text {
     flex: 1;
-    min-width: 280px;
+    min-width: 200px;
 }
 
 .about-hero .about-text h1 {
