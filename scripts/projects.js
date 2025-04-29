@@ -1,9 +1,8 @@
 const filterButtons = document.querySelectorAll('.filter-btn');
-const projectLinks = document.querySelectorAll('.projects-grid a'); // Target the <a> wrapper
+const projectLinks = document.querySelectorAll('.projects-grid a');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Update active button styling
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
