@@ -71,9 +71,9 @@ nav a:hover {
 .contact-form-section {
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: var(--white);
+    background-color: var(--light-peach);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form-section h2 {
