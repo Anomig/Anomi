@@ -3,17 +3,19 @@ const projects = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class
+        // Active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
-        const category = button.getAttribute('data-category');
+        const selectedCategory = button.getAttribute('data-category');
 
         projects.forEach(project => {
-            if (category === 'all' || project.getAttribute('data-category') === category) {
-                project.style.display = 'block';
+            const categories = project.getAttribute('data-category').split(' ');
+
+            if (selectedCategory === 'all' || categories.includes(selectedCategory)) {
+                project.classList.remove('hidden');
             } else {
-                project.style.display = 'none';
+                project.classList.add('hidden');
             }
         });
     });
