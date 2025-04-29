@@ -1,0 +1,146 @@
+/* Reuse your theme colors */
+:root {
+    --red: #B13D14;
+    --light-peach: #f9f2eb;
+    --dark-brown: #340701;
+    --deep-red: #9C1A04;
+    --peach: #FFD7C1;
+    --black: #090400;
+    --white: #e6e6e6;
+}
+
+body {
+    background-color: var(--light-peach);
+    color: var(--dark-brown);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* About page main container */
+.about-main {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Hero section */
+.about-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.about-hero .about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-hero .about-text h1 {
+    font-size: 2.5rem;
+    color: var(--deep-red);
+    margin-bottom: 0.3rem;
+}
+
+.about-hero .about-text .subtitle {
+    font-size: 1.1rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.about-hero .about-text p {
+    color: var(--dark-brown);
+}
+
+.about-photo {
+    flex: 0 0 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--peach);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Section titles */
+.cv-section {
+    margin-bottom: 2.5rem;
+}
+
+.cv-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--deep-red);
+    padding-left: 0.8rem;
+    color: var(--dark-brown);
+}
+
+/* Entry styles */
+.cv-entry {
+    margin-bottom: 1.5rem;
+}
+
+.cv-entry h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--red);
+}
+
+.cv-entry .cv-meta {
+    font-size: 0.95rem;
+    color: var(--black);
+    margin-bottom: 0.4rem;
+}
+
+/* Skills layout */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.skill-group h4 {
+    color: var(--deep-red);
+    margin-bottom: 0.5rem;
+}
+
+.skill-group ul {
+    list-style: disc inside;
+    padding-left: 0.5rem;
+}
+
+/* Footer link back */
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .about-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+}
