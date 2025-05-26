@@ -96,6 +96,11 @@ body {
     margin-bottom: 0.4rem;
 }
 
+.cv-section img {
+    width: 200px;
+    height: 200px;
+}
+
 /* Skills layout */
 .skills-grid {
     display: flex;
