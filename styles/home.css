@@ -218,10 +218,13 @@ footer a:hover {
         max-width: 85%;
     }
     .carousel-slide {
-        height: 250px;
+        height: 200px;
+    }
+    .carousel-view{
+        width: 100%;
     }
     .decorative-divider {
-        display: none;
+        height: 40px;
     }
 
     @keyframes jumpOver{
@@ -235,8 +238,8 @@ footer a:hover {
     @keyframes slide{
         0%   { transform: translateX(10); }
         20%  { transform: translateX(10px); }
-        40%  { transform: translateX(35px); }
-        60%  { transform: translateX(35px); }
+        40%  { transform: translateX(19px); }
+        60%  { transform: translateX(19px); }
         80%  { transform: translateX(0); }
         100% { transform: translateX(0); }
     }
