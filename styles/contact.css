@@ -79,6 +79,8 @@ nav a:hover {
     background-color: var(--light-peach);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .contact-form-section h2 {
@@ -119,7 +121,7 @@ form button:hover {
 .contact-info h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--dark-brown);
+    color: var(--deep-red);
 }
 
 .contact-info ul {
