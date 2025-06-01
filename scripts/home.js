@@ -35,22 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollCarousel();
 
-    const carousel = document.querySelector('.carousel');
+    const carousel = document.querySelector('.carousel-track');
     carousel.addEventListener('mouseover', () => { paused = true; });
     carousel.addEventListener('mouseout', () => { paused = false; });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselTrack = document.querySelector('.carousel-track');
-
-    function pauseAnimation() {
-        carouselTrack.style.animationPlayState = 'paused';
-    }
-
-    function resumeAnimation() {
-        carouselTrack.style.animationPlayState = 'running';
-    }
-
-    document.querySelector('.carousel').addEventListener('mouseover', pauseAnimation);
-    document.querySelector('.carousel').addEventListener('mouseout', resumeAnimation);
 });
