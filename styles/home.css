@@ -59,11 +59,6 @@ nav a:hover {
     padding: 4rem 2rem 2rem;
     position: relative;
     z-index: 0;
-    /* background-color: var(--light-peach);
-    background-image: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;  */
 }
 
 .hero h1 {
@@ -99,14 +94,6 @@ nav a:hover {
     animation-delay: 3s;
     margin-right: -20px;
 }
-/* .decorative-divider {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(90deg, var(--dark-brown) 0%, var(--red) 50%, var(--deep-red) 100%);
-    opacity: 0.1;
-    clip-path: polygon(0 50%, 10% 40%, 20% 50%, 30% 40%, 40% 50%, 50% 40%, 60% 50%, 70% 40%, 80% 50%, 90% 40%, 100% 50%, 100% 100%, 0 100%);
-    margin: 2rem 0;
-} */
 /* carousel////////////////////////////////////////////////////////////////////////////////////////////////////:: */
 .carousel {
     display: flex;
@@ -124,11 +111,10 @@ nav a:hover {
 }
 
 .carousel-track {
-    max-width: 300px;
-    margin: 0 auto;
+    display: flex;
+    will-change: transform;
     display: flex;
     transition: none;
-    animation: scroll 20s linear infinite; /* Animatie van 20 seconden */
 }
 
 .project-item {
