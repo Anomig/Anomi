@@ -69,7 +69,10 @@ nav a:hover {
 
 .hero p {
     font-size: 1.2rem;
-    color: var(--black);
+    color: var(--kblac);
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center; 
 }
 
 .name{
@@ -92,8 +95,33 @@ nav a:hover {
     
     animation: slide 4s  ease-in-out infinite;
     animation-delay: 3s;
-    margin-right: -20px;
+    margin-right: -23px;
 }
+
+.good-animated {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--kblac);
+    position: relative;
+    font-family: inherit;
+    letter-spacing: -0.08em;
+}
+
+.o {
+    display: inline-block;
+    position: relative;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    margin-left: -0.05rem;
+    margin-right: -0.05rem;
+}
+
+.o-right {
+    animation: wink 2.5s infinite;
+}
+
 /* carousel////////////////////////////////////////////////////////////////////////////////////////////////////:: */
 .carousel {
     display: flex;
@@ -177,6 +205,15 @@ footer a:hover {
     text-decoration: underline;
 }
 
+@keyframes wink {
+    0%, 80%, 100% {
+        transform: scaleY(1);
+    }
+    85%, 95% {
+        transform: scaleY(0.2);
+    }
+}
+
 @keyframes jumpOver{
     0%   { transform: translateX(0) translateY(0); }
     20%  { transform: translateX(0) translateY(0); }
@@ -246,9 +283,9 @@ footer a:hover {
         0%   { transform: translateX(0); }
         20%  { transform: translateX(0); }
         30%  { transform: translateX(0.7em); }
-        40%  { transform: translateX(0.9em); }
-        60%  { transform: translateX(0.9em); }
-        80%  { transform: translateX(0.9em); }
+        40%  { transform: translateX(0.8em); }
+        60%  { transform: translateX(0.8em); }
+        80%  { transform: translateX(0.8em); }
         100% { transform: translateX(0); }
     }
 }
