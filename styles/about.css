@@ -63,8 +63,8 @@ body {
 
 .about-photo {
     flex: 0 0 250px;
-    height: 250px;
-    border-radius: 50%;
+    height: 300px;
+    border-radius: 10%;
     background-color: var(--peach);
     background-size: cover;
     background-position: center;
