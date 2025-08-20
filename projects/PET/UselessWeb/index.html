@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Useless Website</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      background-size: 300% 300%;
+      animation: gradientShift 10s ease infinite;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    button {
+      position: absolute;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background: #222;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <button id="uselessBtn">Click Me!</button>
+
+  <script>
+    const btn = document.getElementById("uselessBtn");
+
+    function randomPosition() {
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.left = `${x}px`;
+      btn.style.top = `${y}px`;
+    }
+
+    // Move when mouse is close
+    document.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const distance = Math.hypot(
+        e.clientX - (rect.left + rect.width / 2),
+        e.clientY - (rect.top + rect.height / 2)
+      );
+
+      if (distance < 150) {
+        randomPosition();
+      }
+    });
+
+    // Just for fun: even if clicked, it runs away
+    btn.addEventListener("click", () => {
+      randomPosition();
+      alert("You actually clicked me! That wasn't supposed to happen...");
+    });
+
+    // Set initial position
+    randomPosition();
+  </script>
+</body>
+</html>
