@@ -229,10 +229,10 @@ footer a:hover {
 @keyframes slide{
     0%   { transform: translateX(0); }
     20%  { transform: translateX(0); }
-    30%  { transform: translateX(0.7em); }
-    40%  { transform: translateX(0.8em); }
-    60%  { transform: translateX(0.8em); }
-    80%  { transform: translateX(0.8em); }
+    30%  { transform: translateX(0.6em); }
+    40%  { transform: translateX(0.65em); }
+    60%  { transform: translateX(0.65em); }
+    80%  { transform: translateX(0.65em); }
     100% { transform: translateX(0); }
 }
 
