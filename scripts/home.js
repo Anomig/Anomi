@@ -1,41 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const items = Array.from(track.children);
-    const totalItems = items.length;
-    let currentIndex = 0;
-    let scrollSpeed = 1;
-    let paused = false;
+    const featureItems = Array.from(document.querySelectorAll('.featured-item[data-preview]'));
 
-    // Clone items and append to the end
-    items.forEach(item => {
-        const clone = item.cloneNode(true);
-        track.appendChild(clone);
-    });
-
-    const itemWidth = items[0].clientWidth;
-    const totalWidth = itemWidth * totalItems;
-
-    // Set track width to fit all items (original + clones)
-    track.style.width = `${itemWidth * totalItems * 2}px`;
-
-    function scrollCarousel() {
-        if (!paused) {
-            currentIndex += scrollSpeed;
-            track.style.transform = `translateX(-${currentIndex}px)`;
-
-            // When we've scrolled past the original items, reset instantly to the start
-            if (currentIndex >= totalWidth) {
-                // Instantly jump back by the width of the original set (user won't notice)
-                currentIndex -= totalWidth;
-                track.style.transform = `translateX(-${currentIndex}px)`;
-            }
-        }
-        requestAnimationFrame(scrollCarousel);
+    if (!featureItems.length || window.matchMedia('(max-width: 768px)').matches) {
+        return;
     }
 
-    scrollCarousel();
+    const preview = document.createElement('div');
+    preview.className = 'project-preview';
+    const previewImage = document.createElement('img');
+    previewImage.className = 'project-preview-image';
+    previewImage.alt = '';
+    preview.appendChild(previewImage);
+    document.body.appendChild(preview);
 
-    const carousel = document.querySelector('.carousel-track');
-    carousel.addEventListener('mouseover', () => { paused = true; });
-    carousel.addEventListener('mouseout', () => { paused = false; });
+    let activeItem = null;
+    let targetX = -999;
+    let targetY = -999;
+    let currentX = -999;
+    let currentY = -999;
+
+    function movePreview() {
+        currentX += (targetX - currentX) * 0.18;
+        currentY += (targetY - currentY) * 0.18;
+        preview.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(1) rotate(-2deg)`;
+        requestAnimationFrame(movePreview);
+    }
+
+    movePreview();
+
+    featureItems.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+            activeItem = item;
+            previewImage.src = item.dataset.preview;
+            previewImage.alt = item.dataset.previewAlt || '';
+            preview.classList.add('is-visible');
+        });
+
+        item.addEventListener('mousemove', (event) => {
+            if (!activeItem) {
+                return;
+            }
+
+            const offsetX = 28;
+            const offsetY = 24;
+            targetX = event.clientX + offsetX;
+            targetY = event.clientY - 40;
+
+            const previewWidth = 220;
+            const previewHeight = previewWidth * 0.75;
+
+            if (targetX + previewWidth > window.innerWidth - 20) {
+                targetX = event.clientX - previewWidth - offsetX;
+            }
+
+            if (targetY + previewHeight > window.innerHeight - 20) {
+                targetY = window.innerHeight - previewHeight - 20;
+            }
+
+            if (targetY < 20) {
+                targetY = 20;
+            }
+        });
+
+        item.addEventListener('mouseleave', () => {
+            activeItem = null;
+            preview.classList.remove('is-visible');
+        });
+    });
 });
