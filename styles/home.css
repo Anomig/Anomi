@@ -70,7 +70,7 @@ nav a:hover {
 
 .hero p {
     font-size: 1.2rem;
-    color: var(--kblac);
+    color: var(--dark-brown);
     max-width: 600px; 
     margin: 0 auto; 
     text-align: center; 
@@ -102,7 +102,7 @@ nav a:hover {
 .good-animated {
     display: inline-block;
     font-size: 1rem;
-    color: var(--kblac);
+    color: var(--dark-brown);
     position: relative;
     font-family: inherit;
     letter-spacing: -0.08em;
