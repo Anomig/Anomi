@@ -76,6 +76,51 @@ nav a:hover {
     text-align: center; 
 }
 
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.hero-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.hero-cta a:hover {
+    transform: translateY(-1px);
+}
+
+.hero-cta__primary {
+    background: var(--dark-brown);
+    color: var(--white);
+    border: 1px solid var(--dark-brown);
+}
+
+.hero-cta__primary:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.hero-cta__secondary {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--dark-brown);
+    border: 1px solid rgba(52, 7, 1, 0.14);
+}
+
+.hero-cta__secondary:hover {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(177, 61, 20, 0.22);
+}
+
 .featured-projects {
     width: min(1200px, calc(100% - 2rem));
     margin: 1.5rem auto 0;
@@ -445,6 +490,14 @@ footer a:hover {
     }
     .hero p {
         font-size: 1rem;
+    }
+
+    .hero-cta {
+        gap: 0.6rem;
+    }
+
+    .hero-cta a {
+        width: 100%;
     }
 
     .featured-projects {

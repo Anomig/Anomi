@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,107 +25,135 @@
 <header>
     <nav>
         <a href="/index.html">Home</a>
-        <a href="/projects.html">Projects</a>
+        <a href="/projects.html">Projecten</a>
         <a href="/contact.html">Contact</a>
     </nav>
 </header>
 
 <main class="project-detail">
     <section class="project-hero">
+        <p class="project-label">Uitgelichte case</p>
         <h1>Little Sun</h1>
-        <p class="subtitle">Building a digital workspace to support Little Sun's mission of sustainable agriculture through solar innovation.</p>
-        <img src="/images/little_sun/image.png" alt="Little Sun login">
+        <p class="subtitle">Een digitale werkomgeving bouwen om Little Suns missie rond duurzame landbouw en zonne-innovatie te ondersteunen.</p>
+        <img src="/images/little_sun/image.png" alt="Inlogscherm van Little Sun">
     </section>
 
     <section class="project-description">
-        <h2>Overview</h2>
+        <h2>Overzicht</h2>
         <p>
-            Little Sun has been a pioneer in using solar energy to empower smallholder farmers around the world. 
-            In 2025, they focused exclusively on solar-powered agricultural productivity — combining technology and sustainability.
-            <br><br>
-            Our task was to design and develop an internal **Work Hub** — a platform where managers, employees, and owners could manage schedules, track work hours, view tasks, and improve overall workplace communication.
-            <br><br>
-            This was a group project, where collaboration, communication, and clear task division were crucial.
+            Little Sun is een organisatie die zonne-energie inzet om duurzame landbouw te ondersteunen.
+            Voor dit groepsproject ontwierpen en ontwikkelden we een interne Work Hub die teams helpt om roosters, taken en werkuren op één plek te beheren.
         </p>
+        <div class="case-grid">
+            <div class="case-card">
+                <span>Rol</span>
+                <p>Teamlid met focus op interface-structuur, UI-consistentie en ondersteuning bij implementatie.</p>
+            </div>
+            <div class="case-card">
+                <span>Focus</span>
+                <p>Duidelijke dashboards, rolgebaseerde toegang en betere interne communicatie.</p>
+            </div>
+            <div class="case-card">
+                <span>Middelen</span>
+                <p>HTML, CSS, JavaScript, PHP en MySQL.</p>
+            </div>
+        </div>
     </section>
 
     <section class="project-process">
-        <h2>Process</h2>
+        <h2>Proces</h2>
 
-        <div class="process-step">
+            <h3>1. Vereisten bepalen</h3>
             <h3>1. Defining Requirements</h3>
-            <p>
-                We began by gathering the needs of different user groups (managers, employees, and the owner).
-                <br><br>
-                Key features that had to be included:
+                We begonnen met het in kaart brengen van de noden van de verschillende gebruikersgroepen en vertaalden die naar een praktische interne tool.
+                Het doel was om feature-bloat te vermijden en de belangrijkste acties makkelijk vindbaar te houden.
+                The goal was to avoid feature bloat and keep the most important actions easy to find.
             </p>
-            <ul>
-                <li>Personal dashboard for each user</li>
-                <li>Overview of work schedules and assigned tasks</li>
-                <li>Timesheet management (view and log work hours)</li>
+                <li>Persoonlijk dashboard voor elke gebruiker</li>
+                <li>Overzicht van werkroosters en toegewezen taken</li>
+                <li>Timesheetbeheer (uren bekijken en registreren)</li>
+                <li>Interne meldingen voor taakupdates of roosterwijzigingen</li>
                 <li>Internal notifications for task updates or schedule changes</li>
             </ul>
         </div>
 
-        <div class="process-step">
+            <h3>2. Systeemarchitectuur en wireframes</h3>
             <h3>2. System Architecture & Wireframes</h3>
-            <p>
-                We mapped out the database structure, user permissions, and page flows.
-                <br><br>
-                Technologies we used:
+                We brachten de databasestructuur, gebruikersrechten en paginastromen in kaart vóór we met development begonnen.
+                De wireframes maakten het makkelijker om de dashboards eenvoudig en consistent te houden.
+                The wireframes made it easier to keep the dashboards simple and consistent.
             </p>
-            <ul>
-                <li><strong>Frontend:</strong> HTML, CSS, and a touch of JavaScript for interactivity</li>
-                <li><strong>Backend:</strong> PHP (object-oriented)</li>
+                <li><strong>Front-end:</strong> HTML, CSS en een beetje JavaScript voor interactie</li>
+                <li><strong>Back-end:</strong> PHP (objectgeoriënteerd)</li>
                 <li><strong>Database:</strong> MySQL</li>
-            </ul>
-            <p>
-                Wireframes helped us plan the layout of the dashboards and user journeys, making sure everything was easy to navigate.
-            </p>
-            <!-- <img src="/images/littlesun/wireframes.png" alt="Wireframe sketch of Little Sun Work Hub"> -->
+                <li><strong>Database:</strong> MySQL</li>
+            <p>Wireframes hielpen ons de dashboards en gebruikersflows te plannen zodat de interface voor elke rol leesbaar bleef.</p>
+            <p>Wireframes helped us plan the dashboards and user journeys so the interface stayed readable for each role.</p>
         </div>
 
-        <div class="process-step">
+            <h3>3. Development en samenwerking</h3>
             <h3>3. Development & Collaboration</h3>
-            <p>
-                We divided tasks among the team:
-                <ul>
-                    <li>One part focused on setting up the database and user authentication</li>
-                    <li>Another part worked on the dashboard UI/UX</li>
-                    <li>And a third group managed dynamic functionalities like schedules and timesheets</li>
-                </ul>
-                <br>
-                Regular group standups helped keep everyone aligned and ensured we could solve problems quickly.
+                We verdeelden het werk in duidelijke verantwoordelijkheden: database en authenticatie, dashboard-UI en de dynamische rooster- en timesheetfunctionaliteit.
+                Regelmatige check-ins hielden het team op één lijn en maakten het makkelijker om blokkades snel op te lossen.
+                Regular check-ins kept the team aligned and made it easier to solve blockers quickly.
             </p>
+                <li>Database en authenticatie</li>
+                <li>Dashboard-UI en UX</li>
+                <li>Dynamische rooster- en timesheetfuncties</li>
+                <li>Dynamic schedule and timesheet features</li>
+            </ul>
         </div>
 
-        <div class="process-step">
+            <h3>4. Eindresultaat</h3>
             <h3>4. Final Result</h3>
-            <p>
-                The final platform allowed all users to log in securely, view customized dashboards, and interact with their schedules and tasks. 
-                <br><br>
-                Managers had the ability to assign and edit tasks, while employees could track their hours and stay updated via notifications.
-                <br><br>
-                It was a fully functional internal tool, built from scratch, that could scale with the growing needs of Little Sun.
+                Het eindplatform liet gebruikers veilig inloggen, gepersonaliseerde dashboards bekijken en met roosters en taken werken.
+                Managers konden taken toewijzen en aanpassen, terwijl medewerkers uren konden bijhouden en updates konden volgen.
+                Managers could assign and edit tasks, while employees could track hours and follow updates.
             </p>
         </div>
     </section>
 
-    <section class="project-credits">
+        <h2>In één oogopslag</h2>
+        <h2>At a glance</h2>
+        <div class="case-grid">
+                <span>Probleem</span>
+                <p>Interne communicatie en werkadministratie hadden één duidelijkere digitale plek nodig.</p>
+                <p>Internal communication and work administration needed one clearer digital place.</p>
+            </div>
+                <span>Aanpak</span>
+                <p>Een rolgebaseerde hub bouwen met dashboards, roosters en taakbeheer.</p>
+                <p>Build a role-based hub with dashboards, schedules and task management.</p>
+            </div>
+                <span>Inzicht</span>
+                <p>Ik kan een functionele bedrijfsnoden vertalen naar een gestructureerd digitaal product.</p>
+                <p>I can help translate a functional business need into a structured digital product.</p>
+            </div>
+        </div>
+    </section>
+
+        <h2>Galerij</h2>
         <h2>Team</h2>
-        <ul>
-            <li><a href="http://hannelorevb.be/profiles" target="_blank">Hannelore Van Buynderen</a></li>
-            <li><a href="https://amybruyninckx.com/" target="_blank">Amy Bruyninckx</a></li>
+            <img src="/images/little_sun/image.png" alt="Dashboardoverzicht">
+            <img src="/images/little_sun/admin.jpg" alt="Pagina met werkrooster">
+            <img src="/images/little_sun/database.jpg" alt="Pagina met timesheets">
         </ul>
     </section>
 
     <section class="project-gallery">
-        <h2>Gallery</h2>
+        <h2>Waarom deze case telt</h2>
         <div class="gallery-grid">
-            <img src="/images/little_sun/image.png" alt="Dashboard overview">
-            <img src="/images/little_sun/admin.jpg" alt="Work schedule page">
+            Dit project toont dat ik ook aan meer functionele, systeemgerichte producten kan werken in plaats van alleen visuele concepten.
+            Het bewijst ook dat ik samenwerking tussen design en back-endlogica begrijp.
             <img src="/images/little_sun/database.jpg" alt="Employee timesheet page">
         </div>
+    </section>
+
+    <section class="project-result">
+        <h2>Why this case matters</h2>
+        <p>
+            This project shows that I can work on a more functional, systems-based product instead of only visual concepts.
+            It also proves I understand collaboration across design and backend logic.
+        </p>
     </section>
 
     <a class="back-link" href="/projects.html">← Back to Projects</a>
