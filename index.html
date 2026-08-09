@@ -54,7 +54,7 @@
     <header>
         <nav>
             <a href="/aboutme.html">    About</a>
-            <a href="/projects.html">   Projects</a>
+            <a href="/projects.html">   Projecten</a>
             <a href="/contact.html">    Contact</a>
         </nav>
     </header>
@@ -67,9 +67,9 @@
                 omi!
             </span>
         </h1>
-        <p>I turn ideas into digital experiences. Playful, practical and pixel-perfect.
-            I love learning, collaborating and making things that work. 
-            (<em>and look 
+        <p>Ik verander ideeën naar digitale ervaringen. Speels, praktisch en pixel-perfect. 
+            Leren, samenwerken en dingen maken die werken.
+            (<em>and looking 
                 <span class="good-animated">
                 g
                 <span class="o o-left">o</span>
@@ -78,93 +78,61 @@
             </span> doing it</em>)
         </p>
     </section>
-<!-- carousel//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <section id="projecten">
-        <div class="carousel">
-            <div class="carousel-view">
-                <div class="carousel-track">
-                    <a href="/projects/uselessweb/project-detail.html" class="project-item" style="background-image: url('images/uselessweb/candle.png');">
-                        <div class="project-info">
-                            <h3>The useless web</h3>
-                            <span class="project-tag">Design</span>
-                        </div>
-                    </a>
-                    <a href="projects/dynamic_typography/project-detail.html" class="project-item" style="background-image: url('images/dynamic_typography/glasses.png');">
-                        <div class="project-info">
-                            <h3>Dynamic typography</h3>
-                            <span class="project-tag">Typography</span>
-                            <span class="project-tag">CSS animation</span>
-                        </div>
-                    </a>
-                    <a href="projects/dynamic_poster/project-detail.html" class="project-item" style="background-image: url('images/dynamic_poster/Memento.svg');">
-                        <div class="project-info">
-                            <h3>Dynamic poster</h3>
-                            <span class="project-tag">Design</span>
-                            <span class="project-tag">CSS animation</span>
-                        </div>
-                    </a>
-                    <a href="projects/css_zengarden/project-detail.html" class="project-item" style="background-image: url('images/css_zengarden/Moodbord.png');">
-                        <div class="project-info">
-                            <h3>CSS zengarden</h3>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                    </a>
-                    <a href="projects/Hoppin/project-detail.html" class="project-item" style="background-image: url('images/Hoppin/aanmelden.png');">
-                        <div class="project-info">
-                            <h3>Hoppin</h3>
-                            <span class="project-tag">Redesign</span>
-                        </div>
-                    </a>
-                    <a href="projects/wearwise/project-detail.html" class="project-item" style="background-image: url('images/wearwise/clothes.png');">
-                        <div class="project-info">
-                            <h3>WearWise</h3>
-                            <span class="project-tag">Design</span>
-                            <span class="project-tag">Concept</span>
-                        </div>
-                    </a>
-                    <a href="projects/little_sun/project-detail.html" class="project-item" style="background-image: url('images/little_sun/image.png');">
-                        <div class="project-info">
-                            <h3>Little Sun</h3>
-                            <span class="project-tag">Php</span>
-                        </div>
-                    </a>
-                    <a href="projects/Sneaker" class="project-item" style="background-image: url();">
-                        <div class="project-info">
-                            <h3>Sneaker-coming soon</h3>
-                            <span class="project-tag">ThreeJs</span>
-                            <span class="project-tag">VueJs</span>
-                            <span class="project-tag">NodeJs</span>
-                        </div>
-                    </a>
-                    <a href="projects/trainstation" class="project-item" style="background-image: url();">
-                        <div class="project-info">
-                            <h3>TrainStation-coming soon</h3>
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">Blender</span>
-                        </div>
-                    </a>
-                    <a href="projects/recordstore" class="project-item" style="background-image: url();">
-                        <div class="project-info">
-                            <h3>Record Store-coming soon</h3>
-                            <span class="project-tag">Webflow</span>
-                            <span class="project-tag">React Native</span>
-                        </div>
-                    </a>
-                    <!-- <a href="" class="project-item" style="background-image: url('project2.jpg');">
-                        <div class="project-info">
-                            <h3>Project 6</h3>
-                            <span class="project-tag">Development</span>
-                        </div>
-                    </a> -->
-                    <!-- Voeg meer projecten toe zoals nodig -->
+
+    <section class="featured-projects" aria-labelledby="featured-projects-title">
+        <div class="section-intro">
+            <span class="eyebrow">Selected work</span>
+            <h2 id="featured-projects-title">Drie projecten die mijn stijl laten zien</h2>
+            <p>Een mix van interface design, concept en development: speels opgebouwd, maar altijd met een duidelijke functie.</p>
+        </div>
+
+        <div class="featured-grid">
+            <a class="featured-card featured-card--hoppin" href="projects/Hoppin/project-detail.html">
+                <div class="card-media">
+                    <img src="images/Hoppin/map.png" alt="Hoppin project preview">
                 </div>
-            </div>
+                <div class="card-content">
+                    <span class="card-kicker">App design</span>
+                    <h3>Hoppin</h3>
+                    <p>Een mobiliteitsconcept waarin routes, keuzes en visual clarity samenkomen in een compacte interface.</p>
+                    <span class="card-link">Bekijk case</span>
+                </div>
+            </a>
+
+            <a class="featured-card featured-card--wearwise" href="projects/wearwise/project-detail.html">
+                <div class="card-media">
+                    <img src="images/wearwise/clothes.png" alt="WearWise project preview">
+                </div>
+                <div class="card-content">
+                    <span class="card-kicker">Concept</span>
+                    <h3>WearWise</h3>
+                    <p>Een mode- en stylingervaring met slimme frictie: visueel zacht, inhoudelijk direct.</p>
+                    <span class="card-link">Bekijk case</span>
+                </div>
+            </a>
+
+            <a class="featured-card featured-card--poster" href="projects/dynamic_poster/project-detail.html">
+                <div class="card-media">
+                    <img src="images/dynamic_poster/Memento.svg" alt="Dynamic poster project preview">
+                </div>
+                <div class="card-content">
+                    <span class="card-kicker">Motion / visual</span>
+                    <h3>Dynamic Poster</h3>
+                    <p>Een posterexperiment met ritme, spanning en een meer grafische, experimentele uitstraling.</p>
+                    <span class="card-link">Bekijk case</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-cta">
+            <a href="projects.html">Alle projecten bekijken</a>
         </div>
     </section>
+
 <!-- footer//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <footer>
-        &copy; 2025 Anomi. Crafted with <em>creativity</em> and <em>passion</em>.
+        &copy; 2026 Anomi. Crafted with <em>creativity</em> and <em>passion</em>.
         <div class="social-links">
             <a href="https://www.linkedin.com/in/naomi-goyvaerts" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
             <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio&body=Hallo%20Naomi,
@@ -173,8 +141,6 @@
             <a href="https://github.com/Anomig" target="_blank" rel="noopener noreferrer" aria-label="GitHub">Github</a>
         </div>
     </footer>
-
-    <script src="scripts/home.js"></script>
 
     
 </body>
