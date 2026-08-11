@@ -1342,5 +1342,6 @@ a {
 
     .project-visual {
         min-height: 280px;
+        display: none;
     }
 }
