@@ -307,13 +307,13 @@ a {
 .a {
     animation: jumpOver 4s ease-in-out infinite;
     animation-delay: 3s;
-    margin-right: -20px;
+    margin-right: -10px;
 }
 
 .n {
     animation: slide 4s ease-in-out infinite;
     animation-delay: 3s;
-    margin-right: -23px;
+    margin-right: -10px;
 }
 
 .hero-description {
