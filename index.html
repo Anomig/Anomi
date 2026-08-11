@@ -1,151 +1,579 @@
 <!DOCTYPE html>
 <html lang="nl">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTQZ4FH4YF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KTQZ4FH4YF');
-</script>
-
-<!-- Lucky orange -->
-<script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=53854297"></script>
-
-<!-- hotjar -->
-<script>
-    (function (c, s, q, u, a, r, e) {
-        c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
-        c._hjSettings = { hjid: a };
-        r = s.getElementsByTagName('head')[0];
-        e = s.createElement('script');
-        e.async = true;
-        e.src = q + c._hjSettings.hjid + u;
-        r.appendChild(e);
-    })(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6491177);
-</script>
-
-
-<!-- Start ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anomi | Portfolio</title>
+
+    <title>Anomi | UX/UI Designer & Developer</title>
+
+    <meta
+        name="description"
+        content="Portfolio van Naomi Goyvaerts — UX/UI designer en developer. Ik ontwerp en bouw digitale ervaringen die helder, speels en doordacht aanvoelen."
+    >
+
     <link rel="icon" type="image/png" href="/images/Anomi-favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="styles/home.css">
 
-<!-- Hotjar -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5246322,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTQZ4FH4YF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-KTQZ4FH4YF');
+    </script>
+
+    <!-- Lucky Orange -->
+    <script
+        async
+        defer
+        src="https://tools.luckyorange.com/core/lo.js?site-id=53854297">
+    </script>
+
+    <!-- Hotjar -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5246322,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');
+            r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 </head>
+
+
 <body>
-<!-- header////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <header>
-        <nav>
-            <a href="/aboutme.html">    Over mij</a>
-            <a href="/projects.html">   Projecten</a>
-            <a href="/contact.html">    Contact</a>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="Anomi home">
+            anomi<span>.</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+            <a href="/aboutme.html">Over mij</a>
+            <a href="/projects.html">Projecten</a>
+            <a href="/contact.html">Contact</a>
         </nav>
     </header>
 
-    <section class="hero">
-            <h1>Hallo, ik ben 
-            <span class="name">
-                <span class="letter n">n</span>
-                <span class="letter a">a</span>
-                omi!
-            </span>
-        </h1>
-            <p>Ontwerpen en bouwen van digitale ervaringen die helder, speels en doordacht aanvoelen.
-                (<em>en er nog 
-                <span class="good-animated">
-                g
-                <span class="o o-right">o</span>
-                <span class="o o-left">e</span>
-                
-                d
-                </span> uitzien ook.</em>)
-        </p>
-        <div class="hero-cta">
-            <a class="hero-cta__primary" href="/projects.html">Bekijk mijn projecten</a>
-            <a class="hero-cta__secondary" href="/contact.html">Neem contact op</a>
-        </div>
-    </section>
 
-    <section class="featured-projects" aria-labelledby="featured-projects-title">
-        <div class="section-intro">
-                <span class="eyebrow">Selectie</span>
-            <h2 id="featured-projects-title">Drie projecten die mijn stijl laten zien</h2>
-                <p>Een mix van interface design, concept en development: speels opgebouwd, maar altijd met een duidelijke functie.</p>
-        </div>
+    <main>
 
-        <div class="featured-grid">
-            <a class="featured-card featured-card--hoppin" href="projects/Hoppin/project-detail.html">
-                <div class="card-media">
-                    <img src="images/Hoppin/map.png" alt="Hoppin project preview">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-inner">
+
+                <p class="hero-eyebrow">
+                    UX/UI Designer <span>·</span> Developer
+                </p>
+
+                <h1>
+                    Hallo, ik ben
+
+                    <span class="name">
+                        <span class="letter n">n</span>
+                        <span class="letter a">a</span>
+                        omi!
+                    </span>
+                </h1>
+
+                <p class="hero-description">
+                    Ik ontwerp en bouw digitale ervaringen die
+                    <strong>helder, speels en doordacht</strong>
+                    aanvoelen.
+                    <em>
+                        (en er nog
+                        <span class="good-animated">
+                            g<span class="o o-right">o</span><span class="o o-left">e</span>d
+                        </span>
+                        uitzien ook.)
+                    </em>
+                </p>
+
+                <div class="hero-cta">
+                    <a class="button button--primary" href="#work">
+                        Bekijk mijn werk
+                        <span>↓</span>
+                    </a>
+
+                    <a class="button button--secondary" href="/aboutme.html">
+                        Meer over mij
+                    </a>
                 </div>
-                <div class="card-content">
-                    <span class="card-kicker">Appdesign</span>
+
+            </div>
+
+            <div class="hero-scroll">
+                <span></span>
+                scroll om te ontdekken
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+        ====================================================== -->
+
+        <section class="intro section">
+
+            <div class="intro-number">
+                01
+            </div>
+
+            <div class="intro-content">
+
+                <p class="eyebrow">
+                    Design & development
+                </p>
+
+                <h2>
+                    Ik maak digitale dingen
+                    <span>met een reden.</span>
+                </h2>
+
+                <p class="intro-text">
+                    Van een eerste idee tot een interactieve website of
+                    app. Ik combineer UX/UI design met development om
+                    ervaringen te maken die niet alleen mooi zijn,
+                    maar ook logisch werken.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHAT I DO
+        ====================================================== -->
+
+        <section class="services section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">Wat ik doe</p>
+
+                    <h2>
+                        Design, code
+                        <span>& alles ertussenin.</span>
+                    </h2>
+                </div>
+
+                <p class="section-heading-text">
+                    Ik vind het interessant wanneer design en technologie
+                    elkaar versterken in plaats van los van elkaar te staan.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <article class="service-card service-card--large">
+
+                    <span class="service-number">01</span>
+
+                    <div class="service-icon">✦</div>
+
+                    <h3>
+                        UX / UI
+                    </h3>
+
+                    <p>
+                        Interfaces ontwerpen die duidelijk, toegankelijk
+                        en aangenaam zijn om te gebruiken.
+                    </p>
+
+                    <div class="service-tags">
+                        <span>User research</span>
+                        <span>Wireframes</span>
+                        <span>UI design</span>
+                        <span>Prototyping</span>
+                    </div>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <span class="service-number">02</span>
+
+                    <div class="service-icon">⌘</div>
+
+                    <h3>
+                        Development
+                    </h3>
+
+                    <p>
+                        Designs vertalen naar werkende digitale ervaringen
+                        met aandacht voor detail en interactie.
+                    </p>
+
+                    <div class="service-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <span class="service-number">03</span>
+
+                    <div class="service-icon">↗</div>
+
+                    <h3>
+                        Interaction
+                    </h3>
+
+                    <p>
+                        Kleine bewegingen en interactieve details die een
+                        interface meer karakter geven.
+                    </p>
+
+                    <div class="service-tags">
+                        <span>Motion</span>
+                        <span>Animation</span>
+                        <span>Micro-interactions</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WORK
+        ====================================================== -->
+
+        <section class="work section" id="work">
+
+            <div class="work-heading">
+
+                <div>
+                    <p class="eyebrow">02 — Selected work</p>
+
+                    <h2>
+                        Een paar dingen
+                        <span>die ik gemaakt heb.</span>
+                    </h2>
+                </div>
+
+                <a class="text-link" href="/projects.html">
+                    Alle projecten
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+
+            <!-- HOPPIN -->
+
+            <a
+                class="project project--hoppin"
+                href="projects/Hoppin/project-detail.html"
+            >
+
+                <div class="project-visual">
+
+                    <img
+                        src="images/Hoppin/map.png"
+                        alt="Hoppin app interface"
+                    >
+
+                    <div class="project-overlay">
+                        <span>Bekijk case</span>
+                        <span>↗</span>
+                    </div>
+
+                </div>
+
+                <div class="project-info">
+
+                    <div class="project-meta">
+                        <span>01</span>
+                        <span>App design</span>
+                    </div>
+
                     <h3>Hoppin</h3>
-                    <p>Een mobiliteitsconcept waarin routes, keuzes en visual clarity samenkomen in een compacte interface.</p>
-                    <span class="card-link">Bekijk case</span>
+
+                    <p>
+                        Een mobiliteitsconcept waarin routes, keuzes en
+                        visual clarity samenkomen in een compacte interface.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>UX/UI</span>
+                        <span>Mobile</span>
+                        <span>Prototype</span>
+                    </div>
+
                 </div>
+
             </a>
 
-            <a class="featured-card featured-card--wearwise" href="projects/wearwise/project-detail.html">
-                <div class="card-media">
-                    <img src="images/wearwise/clothes.png" alt="WearWise project preview">
-                </div>
-                <div class="card-content">
-                    <span class="card-kicker">Concept</span>
+
+            <!-- WEARWISE -->
+
+            <a
+                class="project project--wearwise"
+                href="projects/wearwise/project-detail.html"
+            >
+
+                <div class="project-info">
+
+                    <div class="project-meta">
+                        <span>02</span>
+                        <span>Concept</span>
+                    </div>
+
                     <h3>WearWise</h3>
-                    <p>Een mode- en stylingervaring met slimme frictie: visueel zacht, inhoudelijk direct.</p>
-                    <span class="card-link">Bekijk case</span>
+
+                    <p>
+                        Een mode- en stylingervaring met slimme frictie:
+                        visueel zacht, inhoudelijk direct.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Concept</span>
+                        <span>UX/UI</span>
+                        <span>Research</span>
+                    </div>
+
+                    <span class="project-mobile-link">
+                        Bekijk case ↗
+                    </span>
+
                 </div>
+
+                <div class="project-visual">
+
+                    <img
+                        src="images/wearwise/clothes.png"
+                        alt="WearWise fashion interface"
+                    >
+
+                    <div class="project-overlay">
+                        <span>Bekijk case</span>
+                        <span>↗</span>
+                    </div>
+
+                </div>
+
             </a>
 
-            <a class="featured-card featured-card--poster" href="projects/dynamic_poster/project-detail.html">
-                <div class="card-media">
-                    <img src="images/dynamic_poster/Memento.svg" alt="Dynamic poster project preview">
+
+            <!-- DYNAMIC POSTER -->
+
+            <a
+                class="project project--poster"
+                href="projects/dynamic_poster/project-detail.html"
+            >
+
+                <div class="project-visual">
+
+                    <img
+                        src="images/dynamic_poster/Memento.svg"
+                        alt="Dynamic Poster ontwerp"
+                    >
+
+                    <div class="project-overlay">
+                        <span>Bekijk case</span>
+                        <span>↗</span>
+                    </div>
+
                 </div>
-                <div class="card-content">
-                    <span class="card-kicker">Beweging / visueel</span>
+
+                <div class="project-info">
+
+                    <div class="project-meta">
+                        <span>03</span>
+                        <span>Visual / motion</span>
+                    </div>
+
                     <h3>Dynamic Poster</h3>
-                    <p>Een posterexperiment met ritme, spanning en een meer grafische, experimentele uitstraling.</p>
-                    <span class="card-link">Bekijk case</span>
+
+                    <p>
+                        Een posterexperiment met ritme, spanning en een
+                        meer grafische, experimentele uitstraling.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Visual design</span>
+                        <span>Motion</span>
+                        <span>Experiment</span>
+                    </div>
+
                 </div>
+
             </a>
+
+
+            <div class="work-more">
+                <a class="button button--dark" href="/projects.html">
+                    Bekijk alle projecten
+                    <span>→</span>
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT PREVIEW
+        ====================================================== -->
+
+        <section class="about-preview section">
+
+            <div class="about-shape">
+                <span>✦</span>
+            </div>
+
+            <div class="about-content">
+
+                <p class="eyebrow">03 — Even voorstellen</p>
+
+                <h2>
+                    Achter de pixels
+                    zit gewoon <span>Naomi.</span>
+                </h2>
+
+                <p>
+                    Ik ben een UX/UI designer en developer die graag
+                    verschillende disciplines combineert. Ik hou van
+                    duidelijke interfaces, speelse details en projecten
+                    waarin ik zowel mag nadenken als maken.
+                </p>
+
+                <a class="text-link" href="/aboutme.html">
+                    Meer over mij
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="contact-cta section">
+
+            <div class="cta-decoration cta-decoration--one"></div>
+            <div class="cta-decoration cta-decoration--two"></div>
+
+            <div class="cta-inner">
+
+                <p class="eyebrow">
+                    04 — Let's talk
+                </p>
+
+                <h2>
+                    Heb je een idee?
+                    <span>Let's make it happen.</span>
+                </h2>
+
+                <p>
+                    Een website, app, concept of gewoon een idee dat
+                    nog wat vorm nodig heeft? Ik denk graag mee.
+                </p>
+
+                <a
+                    class="button button--light"
+                    href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio"
+                >
+                    Neem contact op
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-top">
+
+            <div class="footer-title">
+                <p>Let's create something</p>
+
+                <a
+                    href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio"
+                >
+                    samen<span>.</span>
+                </a>
+            </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="https://www.linkedin.com/in/naomi-goyvaerts"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
+
+                <a
+                    href="https://github.com/Anomig"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                </a>
+
+                <a
+                    href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio"
+                >
+                    E-mail ↗
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="section-cta">
-            <a href="projects.html">Alle projecten bekijken</a>
+        <div class="footer-bottom">
+            <span>© 2026 Anomi</span>
+            <span>Designed & built by Naomi</span>
         </div>
-    </section>
 
-<!-- footer//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-    <footer>
-        &copy; 2026 Anomi. Gemaakt met <em>creativiteit</em> en <em>passie</em>.
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/naomi-goyvaerts" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-            <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio&body=Hallo%20Naomi,
-            %0D%0AIk%20ben%20geïnteresseerd%20in%20je%20werk%20en%20wil%20graag%20meer%20weten.%0D%0AGroeten," 
-            title="Stuur een e-mail naar Naomi">E-mail</a>
-            <a href="https://github.com/Anomig" target="_blank" rel="noopener noreferrer" aria-label="GitHub">Github</a>
-        </div>
     </footer>
 
-    
+
 </body>
 </html>
