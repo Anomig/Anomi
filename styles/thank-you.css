@@ -1,15 +1,5 @@
 @import url('base.css');
 
-:root {
-    --red: #B13D14;
-    --light-peach: #f9f2eb;
-    --dark-brown: #340701;
-    --deep-red: #9C1A04;
-    --peach: #FFD7C1;
-    --black: #090400;
-    --white: #e6e6e6;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -17,59 +7,40 @@
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--light-peach);
+    background: var(--light-peach);
     color: var(--dark-brown);
     line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-    height: 100%;
-    width: 100%;
-    background-color: var(--light-peach);
-    background-image: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px; 
-}
-
-header {
-    background-color: var(--light-peach);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--dark-brown);
-    position: relative;
-    z-index: 2;
-}
-
-nav a {
-    color: var(--dark-brown);
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: var(--red);
-    text-decoration: underline;
+    background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .thank-you-page {
+    flex: 1;
+    display: grid;
+    place-content: center;
+    min-height: 480px;
+    padding: 4rem 1rem;
     text-align: center;
-    padding: 4rem 2rem;
 }
 
 .thank-you-hero h1 {
-    font-size: 2.5rem;
-    color: var(--deep-red);
     margin-bottom: 1rem;
+    color: var(--deep-red);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
 }
 
 .thank-you-hero p {
-    font-size: 1rem;
-    color: var(--black);
-    margin-bottom: 2rem;
+    max-width: 48ch;
+    margin-inline: auto;
+    color: rgba(52, 7, 1, 0.72);
 }
 
 .thank-you-action {
@@ -77,213 +48,20 @@ nav a:hover {
 }
 
 .back-home-button {
-    padding: 1rem 2rem;
-    background-color: var(--deep-red);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.9rem 1.35rem;
+    background: var(--dark-brown);
     color: var(--white);
+    border: 1px solid var(--dark-brown);
+    border-radius: 999px;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 400;
+    transition: transform 200ms ease, background-color 200ms ease;
 }
 
 .back-home-button:hover {
-    background-color: var(--red);
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--dark-brown);
-    color: white;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-footer a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Shared portfolio navigation and footer */
-
-:root {
-    --grid: rgba(52, 7, 1, 0.055);
-    --border: rgba(52, 7, 1, 0.14);
-    --max-width: 1200px;
-}
-
-body {
-    background-image:
-        linear-gradient(to right, var(--grid) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-
-.site-header {
-    width: min(var(--max-width), calc(100% - 2rem));
-    min-height: 80px;
-    margin-inline: auto;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: transparent;
-    border: 0;
-}
-
-.logo {
-    color: var(--dark-brown);
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.05em;
-    text-decoration: none;
-}
-
-.logo span {
-    color: var(--red);
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.main-nav a {
-    position: relative;
-    margin-left: 0;
-    color: var(--dark-brown);
-    font-size: 0.9rem;
-    text-decoration: none;
-}
-
-.main-nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
     background: var(--red);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 200ms ease;
-}
-
-.main-nav a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.site-footer {
-    position: static;
-    width: auto;
-    margin-top: 3rem;
-    padding: 4rem max(1rem, calc((100vw - 1200px) / 2));
-    background: var(--dark-brown);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--white);
-    text-align: left;
-}
-
-.footer-top {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 3rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.footer-title p {
-    margin-bottom: 0.3rem;
-    color: rgba(230, 230, 230, 0.55);
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.footer-title a {
-    color: var(--white);
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 0.9;
-    letter-spacing: -0.06em;
-    text-decoration: none;
-}
-
-.footer-title a span {
-    color: var(--red);
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.footer-links a {
-    color: var(--white);
-    font-size: 0.85rem;
-    font-weight: 600;
-    opacity: 0.75;
-    text-decoration: none;
-    transition: opacity 180ms ease, color 180ms ease;
-}
-
-.footer-links a:hover {
-    color: var(--peach);
-    opacity: 1;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-top: 1.5rem;
-    color: rgba(230, 230, 230, 0.4);
-    font-size: 0.72rem;
-}
-
-@media (max-width: 768px) {
-    .site-header {
-        padding: 0.85rem 0.75rem;
-    }
-
-    .main-nav {
-        gap: 0.5rem;
-    }
-
-    .main-nav a {
-        padding: 0.35rem 0.5rem;
-        font-size: 0.78rem;
-        white-space: nowrap;
-    }
-
-    .site-footer {
-        padding: 3rem 1rem;
-    }
-
-    .footer-top {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-bottom: 3rem;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 0.4rem;
-    }
+    transform: translateY(-3px);
 }
