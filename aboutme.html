@@ -21,7 +21,6 @@
     <title>Over mij | Naomi Goyvaerts</title>
     <link rel="icon" type="image/png" href="/images/Anomi-favicon.png">
     <link rel="stylesheet" href="/styles/about.css">
-    <link rel="stylesheet" href="/styles/detail.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <!-- hotjar -->
 <script>
@@ -38,9 +37,13 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="/index.html">Home</a>
+<header class="site-header">
+    <a class="logo" href="/" aria-label="Anomi home">
+        anomi<span>.</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
+        <a href="/aboutme.html" aria-current="page">Over mij</a>
         <a href="/projects.html">Projecten</a>
         <a href="/contact.html">Contact</a>
     </nav>
@@ -48,22 +51,23 @@
 
 <main class="about-main">
     <section class="about-hero">
-        <div class="about-photo" style="background-image: url('/images/mijn_foto.jpg');"></div>
+        <div class="about-photo">
+            <img src="/images/mijn_foto.jpg" alt="Naomi Goyvaerts">
+        </div>
         <div class="about-text">
+            <span class="eyebrow">Over mij</span>
             <h1>Naomi Goyvaerts</h1>
             <p class="subtitle">Designer & Developer</p>
             <p>
-                Als designer creëer ik digitale ervaringen die zowel doordacht 
-                als toegankelijk zijn. Voor mij zit de kracht in de balans tussen 
-                esthetiek en functionaliteit. Gedreven door nieuwsgierigheid zoek ik 
-                steeds nieuwe uitdagingen. Met een geduldige en zorgzame aanpak 
-                geloof ik dat elk project een kans is om iets waardevols te maken.
+                Ik ontwerp en bouw digitale ervaringen die helder, speels en doordacht aanvoelen. Mijn achtergrond in design, development en sociaal werk helpt me om niet alleen naar een interface te kijken, maar ook naar de mens die ermee aan de slag gaat.
             </p>
+            <a class="about-cta" href="/contact.html">Maak kennis <span aria-hidden="true">↗</span></a>
         </div>
     </section>
     
 
     <section class="cv-section">
+        <p class="section-label">01 — Mijn basis</p>
         <h2>Opleiding</h2>
         <div class="cv-entry">
             <h3>Bachelor Information Management and Multimedia: Digital Experience Design</h3>
@@ -71,43 +75,45 @@
         </div>
         <div class="cv-entry">
             <h3>Graduaat Sociaal Werk</h3>
-            <p class="cv-meta">Thomas More — x 2019-2022</p>
+            <p class="cv-meta">Thomas More — 2019-2022</p>
         </div>
         <div class="cv-entry">
             <h3>Bachelor Toegepaste Psychologie</h3>
-            <p class="cv-meta">Thomas More — x 2017-2019</p>
+            <p class="cv-meta">Thomas More — 2017-2019</p>
         </div>
     </section>
 
     <section class="cv-section">
+        <p class="section-label">02 — Wat ik meebreng</p>
         <h2>Werkervaring</h2>
         <div class="cv-entry">
             <h3>Stage TheParlor</h3>
             <p class="cv-meta">Sept.2025 - Dec.2025</p>
-            <p>Social media en branding.   
-            </p>
+            <ul class="cv-bullets">
+                <li><strong>Design &amp; content:</strong> Ontwerp van socialmediavisuals en contentideeën.</li>
+                <li><strong>Branding &amp; copy:</strong> Actieve ondersteuning bij een rebrandingtraject.</li>
+                <li><strong>Webdesign:</strong> Ontwerp en realisatie in Webflow.</li>
+            </ul>
         </div>
         <div class="cv-entry">
             <h3>Digital Nomad Bootcamp</h3>
             <p class="cv-meta">Thomas More & Telenet — Sept. 2024 & 2025</p>
-            <p>Samenwerking met Telenet en BASE. 
-                Werken aan een AI-concept en 
-                impact op de customer journey.    
-            </p>
+            <p>In een team werkten we op basis van een gebruikersvraag van Telenet of BASE naar een onderbouwde oplossing. Door een NDA kan ik de inhoud niet verder uitwerken.</p>
         </div>
         <div class="cv-entry">
             <h3>Eventorganisator</h3>
             <p class="cv-meta">Sept 2021 - now</p>
-            <p>Fanclubevents in samenwerking met 8tea5.</p>
+            <p>Fanclubevents organiseren in samenwerking met 8tea5, van idee tot uitvoering.</p>
         </div>
         <div class="cv-entry">
             <h3>Stagiair Kwadraat Buddycoach</h3>
             <p class="cv-meta">CAW — Jan. 2020 - Jun. 2020</p>
-            <p>Stage bij CAW Kwadraat Antwerpen.</p>
+            <p>Begeleiding en ondersteuning tijdens een stage bij CAW Kwadraat Antwerpen.</p>
         </div>
     </section>
 
     <section class="cv-section">
+        <p class="section-label">03 — Waar ik mee werk</p>
         <h2>Vaardigheden</h2>
         <div class="skills-grid">
             <div class="skill-group">
@@ -144,6 +150,7 @@
     </section>
 
     <section class="cv-section">
+        <p class="section-label">04 — Naast het scherm</p>
         <h2>Extra</h2>
         <div class="extra-content card-flip">
             <div class="card-inner">
@@ -152,7 +159,7 @@
                 </div>
                 <div class="card-back">
                     <p>
-                        Een samenwerking met studenten uit Mexico.
+                        Een internationale samenwerking met studenten uit Mexico.
                     </p>
                 </div>
             </div>
@@ -162,8 +169,26 @@
     <a class="back-link" href="/index.html">← Terug naar home</a>
 </main>
 
-<footer id="contact">
-    <p>&copy; 2026 Naomi Goyvaerts. Gemaakt met creativiteit en passie.</p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-title">
+            <p>Let's create something</p>
+            <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio">
+                anomi<span>.</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/naomi-goyvaerts" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/Anomig" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio">E-mail ↗</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Anomi</span>
+        <span>Gemaakt met creativiteit en passie</span>
+    </div>
 </footer>
 
 </body>
