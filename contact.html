@@ -37,46 +37,111 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="/index.html">Home</a>
-        <a href="/projects.html">Projecten</a>
+<header class="site-header">
+    <a class="logo" href="/" aria-label="Anomi home">
+        anomi<span>.</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
         <a href="/aboutme.html">Over mij</a>
+        <a href="/projects.html">Projecten</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
     </nav>
 </header>
 
 <main class="contact-page">
     <section class="contact-hero">
+        <span class="eyebrow">Laten we praten</span>
         <h1>Contact</h1>
-        <p>Heb je een vraag of wil je gewoon hallo zeggen? Stuur gerust een bericht.</p>
+        <p>Een idee, een vraag of zin om samen iets te maken? Ik hoor graag waar je mee bezig bent.</p>
     </section>
 
-    <section class="contact-form-section">
-        <h2>Neem contact op</h2>
-        <form action="https://formsubmit.co/goyvaerts.naomi@hotmail.com" method="POST">
-            <input type="text" name="name" placeholder="Je naam" required>
-            <input type="email" name="email" placeholder="Je e-mailadres" required>
-            <textarea name="message" placeholder="Je bericht" required></textarea>
-            <input type="hidden" name="_next" value="https://portfolio-anomigs-projects.vercel.app/thankyou.html">
-            <input type="hidden" name="_captcha" value="false">
-            <button type="submit">Verstuur bericht</button>
-        </form>
-    </section>
-    
-    <section class="contact-info">
-        <h2>Vind mij hier</h2>
-        <ul>
-            <li>E-mail: <a href="mailto:goyvaerts.naomi@hotmail.com">goyvaerts.naomi@hotmail.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/naomi-goyvaerts" target="_blank">Naomi Goyvaerts</a></li>
-            <li>GitHub: <a href="https://github.com/Anomig" target="_blank">Anomig</a></li>
-        </ul>
-    </section>
-    
+    <div class="contact-content">
+        <section class="contact-form-section">
+            <p class="section-label">01 — Bericht sturen</p>
+            <h2>Neem contact op</h2>
+            <form id="contact-form" action="https://formsubmit.co/ajax/goyvaerts.naomi@hotmail.com" method="POST">
+                <label for="name">Hoe mag ik je noemen?</label>
+                <input id="name" type="text" name="name" placeholder="Je naam" autocomplete="name" required>
+
+                <label for="email">E-mailadres</label>
+                <input id="email" type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" required>
+
+                <label for="message">Bericht</label>
+                <textarea id="message" name="message" placeholder="Vertel me wat je in gedachten hebt..." required></textarea>
+
+                <label class="form-honeypot" for="company">Bedrijf</label>
+                <input class="form-honeypot" id="company" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+                <button type="submit">
+                    Verstuur bericht
+                    <span aria-hidden="true">↗</span>
+                </button>
+
+                <p class="form-status" role="status" aria-live="polite"></p>
+
+                <input type="hidden" name="_subject" value="Nieuw bericht via Anomi Portfolio">
+            </form>
+
+            <div class="contact-success" hidden tabindex="-1">
+                <p class="section-label">Bericht ontvangen</p>
+                <h2>Bedankt, ik laat snel iets horen.</h2>
+                <p>Je bericht is goed aangekomen. Ik lees het zo snel mogelijk en kom bij je terug.</p>
+                <button class="contact-success__reset" type="button">Nog een bericht sturen</button>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <p class="section-label">02 — Andere kanalen</p>
+            <h2>Vind mij hier</h2>
+            <p class="contact-info__intro">Geen groot plan nodig. Een eerste gedachte is al genoeg om te beginnen.</p>
+            <ul>
+                <li>
+                    <span>E-mail</span>
+                    <a href="mailto:goyvaerts.naomi@hotmail.com">goyvaerts.naomi@hotmail.com</a>
+                </li>
+                <li>
+                    <span>LinkedIn</span>
+                    <a href="https://linkedin.com/in/naomi-goyvaerts" target="_blank" rel="noreferrer">Naomi Goyvaerts ↗</a>
+                </li>
+                <li>
+                    <span>GitHub</span>
+                    <a href="https://github.com/Anomig" target="_blank" rel="noreferrer">Anomig ↗</a>
+                </li>
+            </ul>
+        </section>
+    </div>
 </main>
 
-<footer id="contact">
-    <p>&copy; 2026 Anomi. Gemaakt met creativiteit en passie.</p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-title">
+            <p>Let's create something</p>
+            <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio">
+                anomi<span>.</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/naomi-goyvaerts" target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+            <a href="https://github.com/Anomig" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+            <a href="mailto:goyvaerts.naomi@hotmail.com?subject=Contact%20via%20Portfolio">
+                E-mail ↗
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Anomi</span>
+        <span>Gemaakt met creativiteit en passie</span>
+    </div>
 </footer>
+
+<script src="/scripts/contact.js"></script>
 
 </body>
 </html>
