@@ -611,7 +611,12 @@ a {
     padding-top: 1rem;
 }
 
-.project--wearwise {
+.project--1,
+.project--3 {
+    grid-template-columns: 1.35fr 0.65fr;
+}
+
+.project--2 {
     grid-template-columns: 0.65fr 1.35fr;
 }
 
@@ -688,7 +693,11 @@ a {
     justify-content: center;
 }
 
-.project--wearwise .project-info {
+.project--2 .project-info {
+    order: -1;
+}
+
+.project--3 .project-visual {
     order: -1;
 }
 
@@ -735,7 +744,7 @@ a {
     background: #d8e7e5;
 }
 
-.project--wearwise .project-visual {
+.project--3 .project-visual {
     background: #ead8cf;
 }
 
@@ -1098,11 +1107,14 @@ a {
     }
 
     .project,
-    .project--wearwise {
+    .project--1,
+    .project--2,
+    .project--3 {
         grid-template-columns: 1fr;
     }
 
-    .project--wearwise .project-info {
+.project--2 .project-info,
+.project--3 .project-visual {
         order: 0;
     }
 

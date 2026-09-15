@@ -37,10 +37,14 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
+<header class="site-header">
+    <a class="logo" href="index.html" aria-label="Anomi home">
+        anomi<span>.</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
         <a href="aboutme.html">Over mij</a>
+        <a href="projects.html" aria-current="page">Projecten</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
@@ -58,11 +62,11 @@
         </div>
 
         <section class="filter" aria-label="Projectfilters">
-            <button class="filter-btn active" data-category="all">Alles</button>
-            <button class="filter-btn" data-category="web">Webdesign</button>
-            <button class="filter-btn" data-category="dev">Development</button>
-            <button class="filter-btn" data-category="concept">Conceptdesign</button>
-            <button class="filter-btn" data-category="typo">Typografie</button>
+            <button class="filter-btn active" data-category="all" aria-pressed="true">Alles</button>
+            <button class="filter-btn" data-category="web" aria-pressed="false">Webdesign</button>
+            <button class="filter-btn" data-category="dev" aria-pressed="false">Development</button>
+            <button class="filter-btn" data-category="concept" aria-pressed="false">Conceptdesign</button>
+            <button class="filter-btn" data-category="typo" aria-pressed="false">Typografie</button>
         </section>
 
         <section class="projects-grid">
@@ -72,6 +76,7 @@
                     <div class="project-card__content">
                         <span class="project-card__tag">Web / Dev</span>
                         <h3>Zen Garden Redesign</h3>
+                        <p class="project-card__description">Eenzelfde HTML-structuur krijgt een volledig nieuwe visuele identiteit met CSS.</p>
                     </div>
                 </div>
             </a>
@@ -82,6 +87,7 @@
                     <div class="project-card__content">
                         <span class="project-card__tag">App design</span>
                         <h3>Hoppin</h3>
+                        <p class="project-card__description">Een vlottere mobiliteitservaring voor openbaar en gedeeld vervoer.</p>
                     </div>
                 </div>
             </a>
@@ -92,6 +98,7 @@
                     <div class="project-card__content">
                         <span class="project-card__tag">Concept</span>
                         <h3>WearWise</h3>
+                        <p class="project-card__description">Een appconcept dat duurzamere modekeuzes speels stimuleert.</p>
                     </div>
                 </div>
             </a>
@@ -102,6 +109,7 @@
                 <div class="project-card__content">
                     <span class="project-card__tag">Motion</span>
                     <h3>Memento Poster</h3>
+                    <p class="project-card__description">Een bewegende poster over tijd, geheugen en verwarring.</p>
                 </div>
             </div>
             </a>
@@ -112,6 +120,7 @@
                 <div class="project-card__content">
                     <span class="project-card__tag">Typography</span>
                     <h3>Dynamic Typography</h3>
+                    <p class="project-card__description">Typografie die betekenis zichtbaar maakt door beweging.</p>
                 </div>
             </div>
             </a>
@@ -122,6 +131,7 @@
                 <div class="project-card__content">
                     <span class="project-card__tag">Web Design</span>
                     <h3>The Useless Web</h3>
+                    <p class="project-card__description">Bewust nutteloze websites als speelse webexperimenten.</p>
                 </div>
             </div>
             </a>
@@ -132,6 +142,7 @@
                     <div class="project-card__content">
                         <span class="project-card__tag">Development</span>
                         <h3>Little Sun</h3>
+                        <p class="project-card__description">Een digitale werkomgeving voor duurzame landbouw en zonne-innovatie.</p>
                     </div>
                 </div>
             </a>
@@ -142,16 +153,19 @@
                     <div class="project-card__content">
                         <span class="project-card__tag">Development</span>
                         <h3>P.E.T</h3>
+                        <p class="project-card__description">Kleine experimenten die mijn ontwikkeling als maker tonen.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="/projects/Sensus/project-detail.html">
+            <a class="project-link--featured" href="/projects/Sensus/project-detail.html">
                 <div class="project-card" data-category="web dev concept">
                     <img src="images/sensus/banner.png" alt="Sensus project preview">
                     <div class="project-card__content">
+                        <span class="project-card__featured">Uitgelichte case</span>
                         <span class="project-card__tag">UX/UI &amp; Development</span>
                         <h3>Sensus</h3>
+                        <p class="project-card__description">Een interactieve tool die jongeren leert nadenken over consent en grenzen.</p>
                     </div>
                 </div>
             </a>
