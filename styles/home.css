@@ -660,11 +660,31 @@ a {
 }
 
 .project--hoppin .project-visual {
-    background: #d8e7e5;
+    background: #f7f3ec;
+    padding: 2rem;
+}
+
+.project--hoppin .project-visual img {
+    object-fit: contain;
+}
+
+.project--hoppin:hover .project-visual img {
+    transform: none;
 }
 
 .project--3 .project-visual {
-    background: #ead8cf;
+    background: #d6bdb5;
+    min-height: 200px;
+    max-height: 500px;
+    padding: 0.75rem;
+}
+
+.project--3 .project-visual img {
+    object-fit: contain;
+}
+
+.project--3:hover .project-visual img {
+    transform: none;
 }
 
 .project--poster .project-visual {
@@ -953,6 +973,15 @@ a {
 
     .project-visual {
         min-height: 480px;
+    }
+
+    .project--3 .project-visual {
+        aspect-ratio: auto;
+        min-height: 300px;
+    }
+
+    .project--hoppin .project-visual {
+        min-height: 300px;
     }
 
     .project-info {
